@@ -461,6 +461,22 @@ header {
   gap: 50px;
 }
 
+.models-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 600px;
+  gap: 50px;
+}
+
 .models-footer .social-icons a i {
   font-size: 28px;
   cursor: pointer;
@@ -469,42 +485,46 @@ header {
   margin: 0 10px;
 }
 
-.models-footer .social-icons a[href*="facebook"] i {
-  color: #1877F2;
+.models-footer .social-icons a[href*="facebook"] i { color: #1877F2; }
+.models-footer .social-icons a[href*="twitter"] i { color: #1DA1F2; }
+.models-footer .social-icons a[href*="instagram"] i { color: #E4405F; }
+.models-footer .social-icons a[href*="tiktok"] i { color: #eeeaea; }
+.models-footer .social-icons a[href*="youtube"] i { color: #FF0000; }
+
+.models-footer .social-icons a[href*="facebook"]:hover i { color: #0f52ba; }
+.models-footer .social-icons a[href*="twitter"]:hover i { color: #0d95e8; }
+.models-footer .social-icons a[href*="instagram"]:hover i { color: #b92d4c; }
+.models-footer .social-icons a[href*="tiktok"]:hover i { color: #fbf7f7; }
+.models-footer .social-icons a[href*="youtube"]:hover i { color: #cc0000; }
+
+@media (max-width: 768px) {
+  .models-footer {
+    gap: 30px;
+    padding: 8px;
+  }
+  .models-footer .social-icons a i {
+    font-size: 24px;
+    margin: 0 6px;
+  }
 }
 
-.models-footer .social-icons a[href*="twitter"] i {
-  color: #1DA1F2;
+@media (max-width: 480px) {
+  .models-footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    width: 90%;
+  }
+  .models-footer .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .models-footer .social-icons a i {
+    font-size: 22px;
+    margin: 0;
+  }
 }
 
-.models-footer .social-icons a[href*="instagram"] i {
-  color: #E4405F;
-}
 
-.models-footer .social-icons a[href*="tiktok"] i {
-  color: #eeeaea;
-}
-
-.models-footer .social-icons a[href*="youtube"] i {
-  color: #FF0000;
-}
-
-.models-footer .social-icons a[href*="facebook"]:hover i {
-  color: #0f52ba;
-}
-
-.models-footer .social-icons a[href*="twitter"]:hover i {
-  color: #0d95e8;
-}
-
-.models-footer .social-icons a[href*="instagram"]:hover i {
-  color: #b92d4c;
-}
-
-.models-footer .social-icons a[href*="tiktok"]:hover i {
-  color: #fbf7f7;
-}
-
-.models-footer .social-icons a[href*="youtube"]:hover i {
-  color: #cc0000;
-}
