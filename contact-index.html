@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ford Revival - Contact Us</title>
+  <link rel="stylesheet" href="contacts-style.css">
+  <link rel="stylesheet" href="navbar-style.css">
+   <link rel="stylesheet" href="footer-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo">
+        <img src="FordLogo.png" alt="Ford Logo">
+        <a href="index.html">Ford Revival</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i><span class="tooltip">Home</span></a></li>
+          <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i><span class="tooltip">About</span></a></li>
+          <li class="nav-item"><a href="models-index.html"><i class="fas fa-car"></i><span class="tooltip">Models</span></a></li>
+          <li class="nav-item"><a href="gallery-index.html"><i class="fas fa-image"></i><span class="tooltip">Gallery</span></a></li>
+          <li class="nav-item"><a href="contact-index.html" class="active"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a></li>
+          <li class="nav-item"><a href="build-index.html"><i class="fas fa-tools"></i><span class="tooltip">Build and Price</span></a></li>
+          <li class="nav-item"><a href="promos-index.html"><i class="fas fa-tags"></i><span class="tooltip">Promos</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="loader" class="loader">
+    <div class="loader-box">
+      <img src="car.jpg" alt="Loading">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <header class="contact-header">
+    <h1>Contact Us</h1>
+    <p>“Connect With Us Today”</p>
+  </header>
+
+  <section class="contact-container">
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><i class="fas fa-envelope"></i> sharmaineangelmonreal15@gmail.com</p>
+      <p><i class="fas fa-phone"></i> 0992-401-6889</p>
+      <p><i class="fas fa-map-marker-alt"></i> Ford Motor Company, Dearborn, Michigan, USA</p>
+    </div>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </div>
+
+   <footer class="footer">
+  <div class="footer-content">
+   
+    <div class="social-icons">
+      <a href="https://facebook.com/FordPhilippines" target="_blank" class="facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/ford" target="_blank" class="twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/ford" target="_blank" class="instagram" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@ford" target="_blank" class="tiktok" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/ford" target="_blank" class="youtube" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'flex';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

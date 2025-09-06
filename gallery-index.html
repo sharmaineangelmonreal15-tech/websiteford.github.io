@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ford Revival - Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gallery-style.css">
+  <link rel="stylesheet" href="navbar-style.css">
+  <link rel="stylesheet" href="footer-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo">
+        <img src="FordLogo.png" alt="Ford Logo">
+        <a href="index.html">Ford Revival</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i><span class="tooltip">Home</span></a></li>
+          <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i><span class="tooltip">About</span></a></li>
+          <li class="nav-item"><a href="models-index.html"><i class="fas fa-car"></i><span class="tooltip">Models</span></a></li>
+          <li class="nav-item"><a href="gallery-index.html"><i class="fas fa-image"></i><span class="tooltip">Gallery</span></a></li>
+          <li class="nav-item"><a href="contact-index.html"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a></li>
+          <li class="nav-item"><a href="build-index.html"><i class="fas fa-tools"></i><span class="tooltip">Build and Price</span></a></li>
+          <li class="nav-item"><a href="promos-index.html"><i class="fas fa-tags"></i><span class="tooltip">Promos</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="loader" class="loader">
+    <div class="loader-box">
+      <img src="car.jpg" alt="Loading">
+      <p>Loading...</p>
+    </div>
+  </div>
+   
+
+  <section class="gallery">
+  <h1 class="section-title">Ford Revival Gallery</h1>
+  <div class="gallery-grid">
+    <img src="image/img1.jpg" alt="Car 1" onclick="openLightbox(0)">
+    <img src="image/img2.jpg" alt="Car 2" onclick="openLightbox(1)">
+    <img src="image/img3.avif" alt="Car 3" onclick="openLightbox(2)">
+    <img src="image/img4.jpg" alt="Car 4" onclick="openLightbox(3)">
+    <img src="image/img5.avif" alt="Car 5" onclick="openLightbox(4)">
+    <img src="image/img6.jpg" alt="Car 6" onclick="openLightbox(5)">
+    <img src="image/img7.jpg" alt="Car 7" onclick="openLightbox(6)">
+    <img src="image/img8.jpg" alt="Car 8" onclick="openLightbox(7)">
+    <img src="image/img9.jpg" alt="Car 9" onclick="openLightbox(8)">
+    <img src="image/img10.png" alt="Car 10" onclick="openLightbox(9)">
+    <img src="image/img11.jpg" alt="Car 11" onclick="openLightbox(10)">
+    <img src="image/img12.webp" alt="Car 12" onclick="openLightbox(11)">
+    <img src="image/img13.jpg" alt="Car 13" onclick="openLightbox(12)">
+    <img src="image/img14.jpg" alt="Car 14" onclick="openLightbox(13)">
+    <img src="image/img15.jpg" alt="Car 15" onclick="openLightbox(14)">
+    <img src="image/img16.jpg" alt="Car 16" onclick="openLightbox(15)">
+    <img src="image/img17.jpg" alt="Car 17" onclick="openLightbox(16)">
+    <img src="image/img18.jpg" alt="Car 18" onclick="openLightbox(17)">
+    <img src="image/img19.jpg" alt="Car 19" onclick="openLightbox(18)">
+    <img src="image/img20.jpg" alt="Car 20" onclick="openLightbox(19)">
+    <img src="image/img21.jpg" alt="Car 21" onclick="openLightbox(20)">
+    <img src="image/img22.jpg" alt="Car 22" onclick="openLightbox(21)">
+    <img src="image/img23.jpg" alt="Car 23" onclick="openLightbox(22)">
+    <img src="image/img24.jpg" alt="Car 24" onclick="openLightbox(23)">
+  </div>
+</section>
+
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  <img id="lightbox-img" src="" alt="Car Image">
+</div>
+
+
+  <div class="back-home">
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </div>
+   <footer class="footer">
+    <div class="footer-content">
+      <p>This Website is for Academic Purposes Only | Created by Sharmaine Angel Monreal _BSIT-202</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/FordPhilippines" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/ford" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/ford" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ford" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/user/ford" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'flex';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1500);
+    });
+
+</script>
+<script>
+let currentIndex = 0;
+const images = [
+  "image/img1.jpg",
+  "image/img2.jpg",
+  "image/img3.avif",
+  "image/img4.jpg",
+  "image/img5.avif",
+  "image/img6.jpg",
+  "image/img7.jpg",
+  "image/img8.jpg",
+  "image/img9.jpg",
+  "image/img10.png",
+  "image/img11.jpg",
+  "image/img12.webp",
+  "image/img13.jpg",
+  "image/img14.jpg",
+  "image/img15.jpg",
+  "image/img16.jpg",
+  "image/img17.jpg",
+  "image/img18.jpg",
+  "image/img19.jpg",
+  "image/img20.jpg",
+  "image/img21.jpg",
+  "image/img22.jpg",
+  "image/img23.jpg",
+  "image/img24.jpg"
+];
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+let startX = 0;
+document.getElementById("lightbox").addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+document.getElementById("lightbox").addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) changeSlide(1); 
+  if (endX - startX > 50) changeSlide(-1); 
+});
+</script>
+
+
+</body>
+</html>

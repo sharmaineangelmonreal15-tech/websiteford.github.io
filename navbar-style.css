@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  background: linear-gradient(to right, #000000, #005baa); 
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.logo a {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  transform: scale(1.2);
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item .tooltip {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  z-index: 999;
+}
+
+.nav-item:hover .tooltip {
+  opacity: 1;
+  bottom: -30px; 
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 80%; /* bawas sa lapad, adjust % as you like */
+    background: linear-gradient(to right, #000000, #005baa);
+    margin-top: 10px;
+    margin-left: auto;  /* para dumikit sa kanan */
+    margin-right: auto; /* kung gusto naka-center */
+    border-radius: 8px; /* optional, para rounded yung gilid */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+}

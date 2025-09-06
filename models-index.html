@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Models Ford Revival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="models-style.css" />
+  <link rel="stylesheet" href="models-viewer.css" />
+  <link rel="stylesheet" href="navbar-style.css" />
+  <link rel="stylesheet" href="footer-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo">
+        <img src="FordLogo.png" alt="Ford Logo" />
+        <a href="index.html">Ford Revival</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i><span class="tooltip">Home</span></a></li>
+          <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i><span class="tooltip">About</span></a></li>
+          <li class="nav-item"><a href="models-index.html"><i class="fas fa-car"></i><span class="tooltip">Models</span></a></li>
+          <li class="nav-item"><a href="gallery-index.html"><i class="fas fa-image"></i><span class="tooltip">Gallery</span></a></li>
+          <li class="nav-item"><a href="contact-index.html"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a></li>
+          <li class="nav-item"><a href="build-index.html"><i class="fas fa-tools"></i><span class="tooltip">Build and Price</span></a></li>
+          <li class="nav-item"><a href="promos-index.html"><i class="fas fa-tags"></i><span class="tooltip">Promos</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-wrapper"></div>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="ford-bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="loader" class="loader">
+    <div class="loader-box">
+      <img src="car.jpg" alt="Loading">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <header>
+    <h1>Ford Models</h1>
+    <div class="buttons">
+      <button onclick="showModels('raptor')">Ford Raptors</button>
+      <button onclick="showModels('mustang')">Mustangs</button>
+      <button onclick="showModels('suv')">SUVs</button>
+      <button onclick="showModels('maverick')">Mavericks</button>
+      <button onclick="showModels('vans')">Vans & Commercials</button>
+      <button onclick="showModels('sedans')">Sedans & Cars</button>
+      <button onclick="showModels('classics')">Classics & Heritage</button>
+      <button onclick="showModels('concept')">Concept & Prototype</button>
+      <button onclick="showModels('luxuryPremium')">Luxury & Premium</button>
+    </div>
+  </header>
+
+  <div class="content-wrapper"></div>
+  <div id="models-overlay">
+    <div class="overlay-content">
+      <button class="close-btn" onclick="closeOverlay()">&times;</button>
+      <section id="model-display"></section>
+    </div>
+  </div>
+
+  <div id="fullscreen-view" class="fullscreen">
+    <div class="fullscreen-card" id="fullscreen-card"></div>
+    <a href="#" class="close-btn">&times;</a>
+  </div>
+
+  <a href="index.html" class="back-home-btn">Back to Home</a>
+
+  <footer class="models-footer">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://facebook.com/FordPhilippines" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/ford" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/ford" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ford" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/user/ford" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const loader = document.getElementById("loader");
+      loader.style.display = "flex";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1500);
+    });
+
+    const models = {
+      raptor: [
+        { name: "F-150 SVT Raptor (1st Gen, 2010-2014)", image: "raptor/f150-raptor1.webp", description: "The original Raptor. 5.4L and 6.2L V8 engines. Built for extreme off-road." },
+        { name: "F-150 Raptor (2nd Gen, 2017-2020)", image: "raptor/f150-raptor02.webp", description: "Switched to 3.5L twin-turbo V6 EcoBoost. Lightweight aluminum body. FOX shocks." },
+        { name: "F-150 Raptor (3rd Gen, 2021-present)", image: "raptor/f150-raptor3.jpg", description: "Updated suspension, modern tech, 37-inch tires option. EcoBoost V6." },
+        { name: "F-150 Raptor R (3rd Gen, 2023-present)", image: "raptor/f150-raptorR.webp", description: "Supercharged 5.2L V8 engine. Most powerful F-150 Raptor ever." },
+        { name: "Ranger Raptor (1st Gen, 2018-2022)", image: "raptor/ranger-raptor1.jpg", description: "Mid-size Raptor. 2.0L Bi-Turbo diesel. Marketed globally." },
+        { name: "Ranger Raptor (2nd Gen, 2023-present)", image: "raptor/ranger-raptor2.avif", description: "3.0L twin-turbo V6 option. Advanced off-road features. Wider stance." },
+        { name: "Bronco Raptor (1st Gen, 2022-present)", image: "raptor/bronco-raptor.webp", description: "Off-road SUV Raptor. Twin-turbo V6. High-speed desert runner." }
+      ],
+      mustang: [
+        { name: "Mustang GT", image: "mustang/mustang-gt.jpg", description: "Classic muscle car with V8 power and sporty design." },
+        { name: "Mustang EcoBoost", image: "ecoboost.jpg", description: "Turbocharged 4-cylinder Mustang. Affordable performance." },
+        { name: "Mustang Mach 1", image: "mustang/mach1.jpg", description: "Track-focused Mustang with heritage styling." },
+        { name: "Mustang Shelby GT350", image: "mustang/gt--350.jpg", description: "High-revving V8 performance legend." },
+        { name: "Mustang Shelby GT500", image: "mustang/gt--500.jpg", description: "Supercharged powerhouse. Fastest Mustang ever made." },
+        { name: "Mustang Dark Horse", image: "darkhorse.jpg", description: "Newest generation performance Mustang. Raw power, precision handling." },
+        { name: "Mustang Mach-E", image: "mustang/mach--e.jpg", description: "All-electric Mustang SUV. Modern design meets performance." },
+        { name: "Mustang GT3", image: "gt3.jpg", description: "Race variant of the seventh-gen Mustang, designed for competition." }
+      ],
+      suv: [
+        { name: "Ford Explorer", image: "explorer.jpg", description: "Mid-size SUV. Great for families, comfort, and long trips." },
+        { name: "Ford Everest", image: "everest.jpg", description: "Rugged SUV. Strong off-road capability and towing power." },
+        { name: "Ford Expedition", image: "expedition.jpg", description: "Full-size SUV. Spacious, powerful, and family-friendly." },
+        { name: "Ford Escape", image: "escape.avif", description: "Compact SUV. Fuel efficient with modern tech features." },
+        { name: "Ford Edge", image: "edge.webp", description: "Stylish mid-size SUV. Smooth ride with advanced safety features." },
+        { name: "Ford EcoSport", image: "ecosport.jpg", description: "Small, affordable SUV. Good for city driving and efficiency." },
+        { name: "Ford Bronco Sport", image: "bronco-sport.jpg", description: "Smaller Bronco version. Versatile and adventure-ready." }
+      ],
+      maverick: [
+        { name: "Maverick XL", image: "maverick/maverick-xl.avif", description: "Base trim. Affordable, fuel efficient, great for city drivers." },
+        { name: "Maverick XLT", image: "maverick/maverick-xlt.webp", description: "Mid trim. Added comfort, tech features, and more style." },
+        { name: "Maverick Lariat", image: "maverick/maverick-lariat.jpg", description: "Premium trim. Stylish interior with hybrid option." },
+        { name: "Maverick Tremor", image: "maverick/maverick-tremor.jpg", description: "Off-road package. Rugged suspension, AWD system." },
+        { name: "Maverick First Edition", image: "maverick/maverick-first.jpg", description: "Special launch edition with unique styling." },
+        { name: "Maverick FX4 Off-Road", image: "maverick/maverick-fx4.webp", description: "FX4 package. All-terrain tires, skid plates, off-road tuned." },
+        { name: "Maverick Hybrid", image: "maverick/maverick-hybrid.webp", description: "Fuel-efficient hybrid version. Great MPG for city use." },
+        { name: "Maverick AWD EcoBoost", image: "maverick/maverick-awd.jpg", description: "All-wheel drive variant with EcoBoost engine." },
+        { name: "Maverick ST", image: "maverick/maverick-st.png", description: "Sport trim. Performance look with street styling." },
+        { name: "Maverick Black Appearance", image: "maverick/maverick-black.jpg", description: "Special package. Blacked-out wheels and trims." }
+      ],
+      vans: [
+        { name: "Ford Transit Cargo Van", image: "vans/transit-cargo.avif", description: "Versatile van for businesses. Large cargo space." },
+        { name: "Ford Transit Passenger Van", image: "vans/transit-passenger.avif", description: "Comfortable van. Seats many passengers." },
+        { name: "Ford E-Transit", image: "vans/e-transit.avif", description: "All-electric commercial van. Eco-friendly and efficient." },
+        { name: "Ford Transit Connect", image: "vans/transit-connect.jpg", description: "Compact van. Perfect for small businesses." },
+        { name: "Ford SuperVan 4", image: "vans/supervan4.jpg", description: "High-performance electric concept van. Extreme speed." },
+        { name: "Ford Tourneo Custom", image: "vans/tourneo.jpg", description: "Family and business van. Focused on comfort." },
+        { name: "Ford E-Series Cutaway", image: "vans/e-series.jpg", description: "Reliable commercial vehicle. Great for upfitting." },
+        { name: "Ford Transit Courier", image: "vans/transit-courier.jpg", description: "Small delivery van. Easy to drive in the city." }
+      ],
+      sedans: [
+        { name: "Ford Focus", image: "sedans/focus.jpg", description: "Popular compact car. Known for efficiency and handling." },
+        { name: "Ford Fiesta", image: "sedans/fiesta.jpg", description: "Small and fun hatchback/sedan. Affordable and practical." },
+        { name: "Ford Fusion", image: "sedans/fusion.jpeg", description: "Midsize sedan. Comfortable and stylish." },
+        { name: "Ford Taurus", image: "sedans/taurus.jpg", description: "Full-size sedan. Spacious and reliable." },
+        { name: "Ford Mondeo", image: "sedans/mondeo.jpg", description: "European midsize car. Known globally for comfort." },
+        { name: "Ford Contour", image: "sedans/contour.jpg", description: "1990s sedan. Balanced performance and comfort." },
+        { name: "Ford Falcon", image: "sedans/falcon.jpg", description: "Classic sedan in Australia. Strong performance and history." }
+      ],
+      classics: [
+  { name: "Ford Model T", image: "model-t.jpeg", description: "The car that started it all. Affordable and revolutionary." },
+  { name: "Ford Thunderbird", image: "thunderbird.jpg", description: "Iconic personal luxury car. Known for its style." },
+  { name: "Ford GT40", image: "gt.jpg", description: "Legendary race car. Famous for winning Le Mans in the 1960s." },
+  { name: "Ford Capri", image: "capri.jpg", description: "European classic coupe. Stylish and sporty." },
+  { name: "Ford Anglia", image: "anglia.jpg", description: "Small family car. Popular in the mid-20th century." },
+  { name: "Ford Torino", image: "torino.jpg", description: "Muscle car era legend. Powerful and stylish." },
+  { name: "Ford Galaxie", image: "galaxie.jpg", description: "Full-size classic. Known for comfort and power." },
+  { name: "Ford Deluxe", image: "deluxe.jpg", description: "Pre-WWII heritage model. A piece of automotive history." }
+],
+
+concept: [
+  { name: "Ford 021C Concept", image: "021c.webp", description: "Futuristic city car concept designed by Marc Newson in 1999." },
+  { name: "Ford Evos Concept", image: "evos.jpg", description: "Showcased Ford’s design future in 2011 with gullwing doors." },
+  { name: "Ford GT90 Concept", image: "gt90.jpg", description: "Extreme supercar prototype with quad-turbo V12 engine." },
+  { name: "Ford Nucleon", image: "nucleon.avif", description: "1950s concept powered by a nuclear reactor. Never built." },
+  { name: "Ford Indigo Concept", image: "indigo1.jpg", description: "Open-wheel inspired sports car concept from 1996." },
+  { name: "Ford Mustang Mach-E 1400", image: "mach-e-1400.jpg", description: "All-electric Mustang prototype built for performance." },
+  { name: "Ford SYNus", image: "synus.jpg", description: "Urban SUV concept with bank vault-like design (2005)." },
+  { name: "Ford Atlas Concept", image: "atlas.jpg", description: "Pickup truck concept that inspired the modern F-150." },
+  { name: "Ford Shelby GR-1 Concept", image: "gr1.jpg", description: "Stunning sports car concept inspired by the Shelby Daytona." },
+  { name: "Ford Airstream Concept", image: "airstream.jpg", description: "2007 futuristic van concept with sci-fi styling." },
+  { name: "Ford Interceptor Concept", image: "interceptor.jpg", description: "2007 muscle sedan concept with aggressive retro design." },
+  { name: "Ford Reflex Concept", image: "reflex.jpg", description: "Compact hybrid sports car concept introduced in 2006." }
+],
+
+luxuryPremium: [
+  { name: "Lincoln Navigator", image: "luxury/navigator.jpg", description: "Full-size flagship luxury SUV with premium features." },
+  { name: "Lincoln Aviator", image: "luxury/aviator.jpeg", description: "Mid-size luxury SUV available with a plug-in hybrid option." },
+  { name: "Lincoln Corsair", image: "luxury/cons.jpg", description: "Compact premium crossover with modern luxury design." },
+  { name: "Lincoln Nautilus", image: "luxury/nautilus.jpg", description: "Mid-size luxury crossover replacing the Lincoln MKX." },
+  { name: "Lincoln Continental", image: "luxury/continental.webp", description: "Luxury sedan icon, blending elegance with modern tech." },
+  { name: "Lincoln MKZ", image: "luxury/marrr.jpg", description: "Midsize luxury sedan with sleek styling and comfort." },
+  { name: "Lincoln Town Car", image: "luxury/towncar.jpg", description: "Classic full-size luxury sedan, famous for limousines." },
+  { name: "Lincoln Black Label Series", image: "luxury/blacklabel.jpg", description: "Exclusive premium trim line offering top-tier luxury across Lincoln models." }
+],
+
+    };
+
+    function showModels(type) {
+      const overlay = document.getElementById("models-overlay");
+      const section = document.getElementById("model-display");
+      section.innerHTML = "";
+
+      if (!models[type]) return;
+
+      models[type].forEach((car) => {
+        const div = document.createElement("div");
+        div.className = "model-card";
+        div.innerHTML = `
+          <a href="#fullscreen-view" onclick="openFullscreen(\`${car.image}\`, \`${car.name}\`, \`${car.description}\`)">
+            <img src="${car.image}" alt="${car.name}">
+            <h3>${car.name}</h3>
+            <p>${car.description}</p>
+          </a>
+        `;
+        section.appendChild(div);
+      });
+
+      overlay.style.display = "flex"; 
+    }
+
+    function closeOverlay() {
+      document.getElementById("models-overlay").style.display = "none"; 
+      document.getElementById("model-display").innerHTML = "";
+    }
+
+    function openFullscreen(img, title, desc) {
+      const container = document.getElementById("fullscreen-card");
+      container.innerHTML = `
+        <img src="${img}" alt="${title}">
+        <h3>${title}</h3>
+        <p>${desc}</p>
+      `;
+      document.addEventListener("click", function(e) {
+        const popup = document.querySelector(".fullscreen:target");
+        if (popup && !popup.querySelector(".fullscreen-card").contains(e.target) && !e.target.matches("a[href^='#']")) {
+          window.location.hash = ""; 
+        }
+      });
+    }
+  </script>
+</body>
+</html>

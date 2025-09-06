@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ford Revival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navbar-style.css">
+  <link rel="stylesheet" href="about-style.css">
+  <link rel="stylesheet" href="models-style.css">
+  <link rel="stylesheet" href="footer-style.css">
+  <link rel="stylesheet" href="loader-style.css">
+  <link rel="stylesheet" href="button-style.css"> 
+  <link rel="stylesheet" href="content1-style.css"> 
+  <link rel="stylesheet" href="pickup-style.css">
+  <link rel="stylesheet" href="cartwheel-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv"> 
+      <div class="logo">
+        <img src="FordLogo.png" alt="Ford Logo">
+        <a href="index.html">Ford Revival</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li class="nav-item"><a href="#" onclick="goHome()"><i class="fas fa-home"></i><span class="tooltip">Home</span></a></li>
+          <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i><span class="tooltip">About</span></a></li>
+          <li class="nav-item"><a href="models-index.html"><i class="fas fa-car"></i><span class="tooltip">Models</span></a></li>
+          <li class="nav-item"><a href="gallery-index.html"><i class="fas fa-image"></i><span class="tooltip">Gallery</span></a></li>
+          <li class="nav-item"><a href="contact-index.html"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a></li>
+          <li class="nav-item"><a href="build-index.html"><i class="fas fa-tools"></i><span class="tooltip">Build and Price</span></a></li>
+          <li class="nav-item"><a href="promos-index.html"><i class="fas fa-tags"></i><span class="tooltip">Promos</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner" id="banner">
+    <img src="banner3.png" alt="Ford Banner">
+    <a href="models-index.html" class="start-button"><i class="fas fa-shopping-cart"></i> Start Your Purchase</a>
+  </div>
+
+  <section class="content1-section" id="content1" 
+  style="background: url('content1-bg.jpg') no-repeat center center; 
+         background-size: cover; padding: 60px 20px; color: white;">
+    <div class="content1-container" style="background: rgba(0,0,0,0.6); padding: 30px 40px; border-radius: 10px;">
+      <h2>Experience the Power of Innovation</h2>
+      <p>Explore the future of driving with Ford's latest advancements in technology and performance. Our mission is to drive the world forward—one innovation at a time.</p>
+      <div class="cartwheel-slider">
+      <ul class="cartwheel-track">
+  <li><img src="picture/pic1.jpg" alt="Pic 1"></li>
+  <li><img src="picture/pic2.jpg" alt="Pic 2"></li>
+  <li><img src="picture/pic3.jpg" alt="Pic 3"></li>
+  <li><img src="picture/pic4.jpg" alt="Pic 4"></li>
+  <li><img src="picture/pic5.jpg" alt="Pic 5"></li>
+  <li><img src="picture/pic6.jpg" alt="Pic 6"></li>
+  <li><img src="picture/pic7.jpg" alt="Pic 7"></li>
+  <li><img src="picture/pic8.jpg" alt="Pic 8"></li>
+  <li><img src="picture/pic9.jpg" alt="Pic 9"></li>
+  <li><img src="picture/pic10.jpg" alt="Pic 10"></li>
+  <li><img src="picture/pic1.jpg" alt="Pic 1"></li>
+  <li><img src="picture/pic2.jpg" alt="Pic 2"></li>
+  <li><img src="picture/pic3.jpg" alt="Pic 3"></li>
+  <li><img src="picture/pic4.jpg" alt="Pic 4"></li>
+  <li><img src="picture/pic5.jpg" alt="Pic 5"></li>
+  <li><img src="picture/pic6.jpg" alt="Pic 6"></li>
+  <li><img src="picture/pic7.jpg" alt="Pic 7"></li>
+  <li><img src="picture/pic8.jpg" alt="Pic 8"></li>
+  <li><img src="picture/pic9.jpg" alt="Pic 9"></li>
+  <li><img src="picture/pic10.jpg" alt="Pic 10"></li>
+</ul>
+
+      </div>
+    </div>
+  </section>
+
+<section class="pickup-models" id="pickup">
+  <h2 class="pickup-title">Latest Models</h2>
+  <div class="pickup-container">
+    <div class="pickup-card">
+      <img src="ranger.jpg" alt="Ford Mustang">
+      <h3>Ford Mustang</h3>
+      <a href="models-index.html" class="explore-button">Explore</a>
+    </div>
+    <div class="pickup-card">
+      <img src="maverick/maverick-lariat.jpg" alt="Ford Maverick">
+      <h3>Ford Maverick</h3>
+      <a href="models-index.html" class="explore-button">Explore</a>
+    </div>
+    <div class="pickup-card">
+      <img src="fordeverest.jpg" alt="Ford Maverick">
+      <h3>Ford Everest</h3>
+      <a href="models-index.html" class="explore-button">Explore</a>
+    </div>
+    <div class="pickup-card">
+      <img src="fordraptor.jpg" alt="Ford Maverick">
+      <h3>Ford Raptor</h3>
+      <a href="models-index.html" class="explore-button">Explore</a>
+    </div>
+  </div>
+</section>
+
+ <footer class="footer">
+  <div class="footer-content">
+    <p>This website is for Academic Purposes Only | Created by Sharmaine Angel Monreal_BSIT-202</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/FordPhilippines" target="_blank" class="facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/ford" target="_blank" class="twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/ford" target="_blank" class="instagram" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@ford" target="_blank" class="tiktok" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/ford" target="_blank" class="youtube" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+    function showLoader(callback) {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'flex';
+      setTimeout(() => {
+        loader.style.display = 'none';
+        if (callback) callback();
+      }, 1500);
+    }
+    function goHome() {
+      showLoader(() => {
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('banner').style.display = 'block';
+        document.getElementById('content1').style.display = 'block';
+        document.getElementById('pickup').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>
