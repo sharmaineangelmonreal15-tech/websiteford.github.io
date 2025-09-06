@@ -12,8 +12,9 @@ html, body {
   padding: 20px;
   scroll-behavior: smooth;
 }
+
 body {
-    background: url('contact-bg.jpg') no-repeat center top;
+  background: url('contact-bg.jpg') no-repeat center top;
   background-size: cover;
   min-height: calc(100vh - var(--footer-height));
   display: flex;
@@ -225,13 +226,34 @@ header p {
   100% { filter: drop-shadow(0 0 5px rgba(243, 243, 243, 0.3)); }
 }
 
+@media (max-width: 1024px) {
+  header h1 { font-size: 50px; }
+  header p { font-size: 20px; }
+  .contact-container { gap: 20px; }
+}
+
 @media (max-width: 720px) {
   .contact-container {
     flex-direction: column;
     padding: 10px;
   }
-
   .contact-form, .contact-info {
     flex: 1 1 100%;
+  }
+  header h1 { font-size: 40px; }
+  header p { font-size: 18px; }
+  .back-home-btn { font-size: 0.9rem; padding: 10px 20px; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 32px; }
+  header p { font-size: 16px; }
+  .contact-form, .contact-info { padding: 15px; }
+  .contact-form button { font-size: 1rem; padding: 10px 20px; }
+  .back-home-btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    bottom: 15px;
+    right: 15px;
   }
 }
