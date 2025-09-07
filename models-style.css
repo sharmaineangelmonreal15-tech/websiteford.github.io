@@ -270,20 +270,29 @@ header {
 }
 
 .video-container {
-  position: fixed;
-  top: 80px;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  max-height: 100vh;
   overflow: hidden;
   z-index: 0;
 }
 
 .video-container video {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    height: auto;
+    min-height: 50vh;
+  }
+  .video-container video {
+    object-fit: contain;
+  }
 }
 
 #models-overlay {
@@ -526,5 +535,6 @@ header {
     margin: 0;
   }
 }
+
 
 
