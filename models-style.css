@@ -1,4 +1,4 @@
-* {* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -234,5 +234,6 @@ header {
 .back-home-btn:hover {
   background-color: #0088cc;
 }
+
 
 
